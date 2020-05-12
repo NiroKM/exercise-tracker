@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 //open connection to the database using Connection String used as an environment Variable
-const uri = process.env.ATLAS_URI;
+const uri = process.env.DATABASE_URL;
 mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true});
 
 
