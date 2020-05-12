@@ -26,7 +26,7 @@ export default class ExerciseList extends Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:5000/exercise/")
+        axios.get("http://mern-exercise:38325/exercise/")
             .then(response=>{
                 this.setState({
                     exercises:response.data
@@ -36,7 +36,7 @@ export default class ExerciseList extends Component{
     }
 
     deleteExercise=(nid)=>{
-        axios.delete("http://localhost:5000/exercise/"+nid)
+        axios.delete("http://mern-exercise:38325/exercise/"+nid)
             .then(response=>console.log(response.data))
             .catch(err=>console.log(err))
         
